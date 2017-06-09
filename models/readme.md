@@ -34,7 +34,6 @@ git push -u origin master
 ```
 
 ### Mongo Model and Schema Sample
-[mongo models](./models/readme.md)
 Models go in the `/models` directory and should always be named **singularly**. 
 
 **FILE NAMING CONVENTION**
