@@ -1,0 +1,22 @@
+{% import "../macros/forms.html" as forms %}
+{% extends "../partials/base.html" %}
+
+{% block mainContent %}
+
+<div class="container">
+    <div class="row">
+        
+        <h1 class="text-center">Add New Comment to {{ campground.name }}</h1>
+        <div style="width: 30%; margin:25px auto;">
+            <form action="/campgrounds/{{ campground.id }}/comments" method="POST">
+                {{ forms.field('comment[text]', placeholder='Comment') }}
+                {{ forms.field('comment[author]', placeholder='Author') }}
+                {{ forms.button('Save', size="btn-lg", style="btn-primary", additionalClasses="btn-block" ) }}
+            </form>
+            <a href="/campgrounds/{{ campground.id }}">Back</a>
+        </div>
+        
+    </div>
+</div>
+
+{% endblock %}

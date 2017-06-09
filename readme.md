@@ -1,10 +1,16 @@
 # Yelp-Camp
 
+### Tutorial Source Code
+
+Source code for tutorials can be found here [webdevbootcamp](https://ide.c9.io/learnwithcolt/webdevbootcamp)
+
 ### Running Server
 
 You can start the server by running the folowing command.
 
     nodemon app.js -e js,html
+
+This will monitor all change to javascript and html files, and restart the server on any changes.
     
 ### Saving to GIT
 
