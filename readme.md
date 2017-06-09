@@ -33,36 +33,28 @@ git commit -m "First Init"
 git push -u origin master
 ```
 
-### Mongo Model and Schema Sample
-[mongo models](./models/readme.md)
-Models go in the `/models` directory and should always be named **singularly**. 
-
-**FILE NAMING CONVENTION**
-- Separate words with hyphens (i.e. `-`)
-- Should be named singularly (e.g. `comment.js` not `comments.js`) Note that when they are saved to Mongo, they will automatically be pluralized.
-- File names should have a terse one or two word name that describes the material covered in the document.
-
-**FIELD NAMES**
-- Use camelCase.
-- Don’t use _ underscore as the starting character of the field name. The only field with _ undescore should be _id.
-- Field names cannot contain . dots or null characters and must not start with a $ dollar sign.
-
-
-Below is an example of `/models/comment.js`.
-```javascript
-//REQUIRE MONGOOSE
-var mongoose = require("mongoose");
-
-//SETUP SCHEMA
-var commentSchema = new mongoose.Schema({
-    author: String,
-    text: String
-});
-
-//CREATE NEW MODEL
-var Comment = mongoose.model("Comment", commentSchema);
-
-//EXPORT MODEL FOR USE IN OTHER FILES
-module.exports = Comment;
-```
+### Directory
+- [mongo models](./models/readme.md)
     
+```javascript
+/models                 /*Used to store schema for mongo models, all DB operations should take place here*/
+    comments.js
+    user.js
+/public
+    /stylesheets
+    /javscript
+/view
+    comments/
+        index.html
+        new.html
+        show.html
+    macros/
+        forms.html
+    partials/
+        base.html
+        header.html
+        footer.html
+app.js
+package.json
+seeds.js
+```
