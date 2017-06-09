@@ -36,8 +36,8 @@ git push -u origin master
 ### Directory
 - [mongo models](./models/readme.md)
     
-```javascript
-/models                 /*Used to store schema for mongo models, all DB operations should take place here*/
+```java
+/models                 //Used to store schema for mongo models, all DB operations should take place here
     comments.js
     user.js
 /public
