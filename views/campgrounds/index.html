@@ -1,0 +1,29 @@
+{% extends "../partials/base.html" %}
+
+{% block mainContent %}
+    <div class="container">
+        <header class="jumbotron">
+            <div class="container">
+                <h1>Welcome to Yelp Camp!</h1>
+                <p>View our hand picked campgrounds from all over the world</p>
+                <p>
+                <a href="/campgrounds/new" class="btn btn-primary btn-large">Add New Campground</a>
+                </p>
+            </div>
+        </header>
+        
+        
+        
+        <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+            {% for campground in campgrounds %}
+                <div class="col-md-3 col-sm-6">
+                    <div class="thumbnail">
+                       <img src="{{ campground.image }}"> 
+                       <div class="camption"><h4>{{ campground.name | title }}</h4></div>
+                       <a href="/campgrounds/{{ campground.id }}">More Info</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

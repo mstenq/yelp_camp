@@ -1,0 +1,20 @@
+{% macro field(name, value='', type='text', placeholder='') %}
+
+    <div class="form-group">
+        <input  class="form-control" 
+                name="{{ name }}" 
+                value="{{ value | escape }}" 
+                type="{{ type }}" 
+                placeholder="{{ placeholder }}">
+        </input>
+    </div>
+    
+{% endmacro %}
+
+{% macro button(name, size='', style='btn-default', additionalClasses='' )  %}
+
+    <div class="form-group">
+        <input class="btn {{ size }} {{ style }} {{ additionalClasses }}" type="submit" value="{{ name }}"></input>
+    </div>
+
+{% endmacro %}

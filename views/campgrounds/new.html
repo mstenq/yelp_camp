@@ -1,0 +1,23 @@
+{% import "../macros/forms.html" as forms %}
+{% extends "../partials/base.html" %}
+
+{% block mainContent %}
+
+<div class="container">
+    <div class="row">
+        
+        <h1 class="text-center">New Campground</h1>
+        <div style="width: 30%; margin:25px auto;">
+            <form action="/campgrounds" method="POST">
+                {{ forms.field('name', placeholder='Name') }}
+                {{ forms.field('image', placeholder='Image URL') }}
+                {{ forms.field('description', placeholder='Description') }}
+                {{ forms.button('Save', size="btn-lg", style="btn-primary", additionalClasses="btn-block" ) }}
+            </form>
+            <a href="/campgrounds">Back</a>
+        </div>
+        
+    </div>
+</div>
+
+{% endblock %}
